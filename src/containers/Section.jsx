@@ -8,7 +8,7 @@ import {
 class Header extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {data: {content: "<p>foo</p>"}};
+    this.state = {data: {content: "<p></p>"}};
     fetch("/"+this.props.foo+".json").then(x => x.json()).then(x => {this.setState({data: x})})
     console.log(this.props.foo);
   }

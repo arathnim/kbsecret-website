@@ -26,7 +26,7 @@ class Header extends React.Component {
                   <span className={styles.navitem}>Gem Docs</span>
               </a>
 
-              <a href="http://blog.yossarian.net/2018/01/17/KBSecret-1.0">
+              <a href="http://blog.yossarian.net/tags#kbsecret">
                   <span className={styles.navitem}>Blog</span>
               </a>
 
