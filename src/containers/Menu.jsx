@@ -7,8 +7,6 @@ import {
 
 import { Grid, Row, Col } from 'react-flexbox-grid';
 
-// import FontAwesome from 'react-fontawesome'
-
 class Menu extends React.Component {
   constructor(props) {
     super(props);

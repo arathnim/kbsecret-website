@@ -7,8 +7,6 @@ import {
   Route,
 } from 'react-router-dom'
 
-import { AnimatedRoute, AnimatedSwitch } from 'react-router-transition'
-
 import Header from './containers/Header.jsx'
 import Menu from './containers/Menu.jsx'
 import Section from './containers/Section.jsx'
