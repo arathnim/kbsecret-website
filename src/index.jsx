@@ -14,6 +14,8 @@ import Section from './containers/Section.jsx'
 import styles from './style.sass'
 import history from './history'
 
+var isMobile = 'ontouchstart' in window;
+
 function order(p) {
   if (p == "#/") {
     return 1;
@@ -58,8 +60,7 @@ class Init extends React.Component {
 
   render() {
       return (
-        <Router history={history}>
-          <div className={styles.home}>
+          <div className={styles.home} style={{ fontSize: isMobile ? '2em' : '1em'}}>
             <Header />
 
             <div className={styles.titleContainer}>
@@ -69,7 +70,10 @@ class Init extends React.Component {
               <p>A secret manager backed by Keybase and KBFS</p>
             </div>
 
-            <div className={styles.section} style={{ paddingBottom: 0, paddingTop: '4%'}}><Menu active={this.state.currentpage} /></div>
+            <Router history={history}>
+
+            <div style={{ 'overflow-x': 'hidden'}}>
+            <div className={isMobile ? styles.mobilesection : styles.section} style={{ paddingBottom: 0, paddingTop: '4%'}}><Menu active={this.state.currentpage} /></div>
 
             <Switch
               atEnter={{ offset: calcEnterOffset(this.state.currentpage, this.state.lastpage), opacity: 0 }}
@@ -104,9 +108,10 @@ class Init extends React.Component {
             <Redirect exact from="/" to="/intro/" />
 
             </Switch>
+            </div>
+            </Router>
 
           </div>
-        </Router>
     );
   }
 }
