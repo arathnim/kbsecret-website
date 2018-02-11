@@ -1,0 +1,15 @@
+language: node_js
+before_script:
+  - npm install
+script:
+  - npm run build
+deploy:
+  provider: pages
+  skip-cleanup: true
+  keep-history: true
+  local-dir: public
+  repo: kbsecret/kbsecret.github.io
+  target-branch: testing
+  github-token: $GITHUB_TOKEN
+  on:
+    branch: master
