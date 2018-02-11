@@ -2,7 +2,7 @@
 layout: default
 ---
 
-Once you have KBSecret [installed](installation), getting started is straightforward.
+Once you have KBSecret [installed](/#/installation), getting started is straightforward.
 
 ## Terminology
 
@@ -173,7 +173,7 @@ That covers the basics of KBSecret's main primitives: types, records, and sessio
 
 These examples demonstrate some of the most common operations, but there are plenty of other
 commands and options that you'll find useful. Luckily, they're all documented in the
-[manual pages](man/)!
+[manual pages](/#/man/kbsecret.1)!
 
 ## Afternote
 
