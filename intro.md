@@ -36,4 +36,4 @@ the Keybase platform.
     KBSecret's sessions and records can be manipulated with standard Unix tools (although
     we recommend using the [`kbsecret` commands](man/))
 
-Interested? Check out [the installation](installation) and [quick start](quickstart) guides.
+Interested? Check out [the installation](/#/installation/) and [quick start](/#/quickstart/) guides.
