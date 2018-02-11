@@ -12,7 +12,7 @@ deploy:
   keep-history: true
   local-dir: public
   repo: kbsecret/kbsecret.github.io
-  target-branch: testing
+  target-branch: master
   github-token: $GITHUB_TOKEN
   on:
     branch: master
