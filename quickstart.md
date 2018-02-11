@@ -2,7 +2,7 @@
 layout: default
 ---
 
-Once you have KBSecret [installed](/#/installation/), getting started is straightforward.
+Once you have KBSecret [installed](/#/install/), getting started is straightforward.
 
 ## Terminology
 
