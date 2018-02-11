@@ -50,4 +50,4 @@ If you see something like `kbsecret version 0.9.7.`, you're good to go!
 
 Everything working? Check out the [quick start](/#/quickstart/) guide.
 
-Something broken? [Tell us about it](github.com/kbsecret/kbsecret/issues).
+Something broken? [Tell us about it](https://github.com/kbsecret/kbsecret/issues).
