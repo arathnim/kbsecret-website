@@ -4,6 +4,7 @@ const path = require('path')
 const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 const babelOpts = {
   test: /\.jsx?$/,
@@ -47,6 +48,7 @@ const pluginList = [
     appMountId: 'main',
     devServer: '',
   }),
+  new FaviconsWebpackPlugin('./icon.png'),
 ]
 
 const stats = {

@@ -27,6 +27,7 @@
     "cssnano": "^3.10.0",
     "empty": "^0.10.1",
     "extract-text-webpack-plugin": "^2.1.0",
+    "favicons-webpack-plugin": "0.0.7",
     "fs-extra": "^5.0.0",
     "gray-matter": "^3.1.1",
     "html-webpack-plugin": "^2.28.0",
