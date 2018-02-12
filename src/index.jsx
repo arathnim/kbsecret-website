@@ -16,44 +16,11 @@ import history from './history'
 
 var isMobile = 'ontouchstart' in window;
 
-function order(p) {
-  if (p == "#/") {
-    return 1;
-  }
-  if (p == "#/install/") {
-    return 2;
-  }
-  if (p == "#/quickstart/") {
-    return 3;
-  }
-  if (p == "#/customize/") {
-    return 4;
-  }
-  return 0;
-}
-
-function calcEnterOffset(c, l) {
-  if (order(c) < order(l)) {
-    return -100;
-  } else {
-    return  100;
-  }
-}
-
-function calcExitOffset(c, l) {
-  if (order(c) > order(l)) {
-    return -100;
-  } else {
-    return  100;
-  }
-}
-
 class Init extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {currentpage: '#/intro/', lastpage: '#/intro/'};
+    this.state = {currentpage: history.location.hash};
     history.listen((location, action) => {
-      this.setState({lastpage: this.state.currentpage})
       this.setState({currentpage: location.hash})
     })
   }
@@ -75,37 +42,30 @@ class Init extends React.Component {
             <div style={{ 'overflow-x': 'hidden'}}>
             <div className={isMobile ? styles.mobilesection : styles.section} style={{ paddingBottom: 0, paddingTop: '4%'}}><Menu active={this.state.currentpage} /></div>
 
-            <Switch
-              atEnter={{ offset: calcEnterOffset(this.state.currentpage, this.state.lastpage), opacity: 0 }}
-              atLeave={{ offset: calcExitOffset(this.state.currentpage, this.state.lastpage), opacity: 0}}
-              atActive={{ offset: 0, opacity: 1 }}
-              mapStyles={(styles) => ({
-                transform: `translateX(${styles.offset}%)`,
-                opacity: styles.opacity,
-              })}>
+            <Switch>
 
-            <Route exact
-              path="/intro/"
-              foo="intro"
-              component={()=> <Section foo="intro" />}>
-            </Route>
+              <Route exact
+                path="/intro/"
+                foo="intro"
+                component={()=> <Section foo="intro" />}>
+              </Route>
 
-            <Route exact
-              path="/install/"
-              component={()=> <Section foo="install" />}>
-            </Route>
+              <Route exact
+                path="/install/"
+                component={()=> <Section foo="install" />}>
+              </Route>
 
-            <Route exact
-              path="/quickstart/"
-              component={()=> <Section foo="quickstart" />}>
-            </Route>
+              <Route exact
+                path="/quickstart/"
+                component={()=> <Section foo="quickstart" />}>
+              </Route>
 
-            <Route exact
-              path="/customize/"
-              component={()=> <Section foo="customize" />}>
-            </Route>
+              <Route exact
+                path="/customize/"
+                component={()=> <Section foo="customize" />}>
+              </Route>
 
-            <Redirect exact from="/" to="/intro/" />
+              <Redirect exact from="/" to="/intro/" />
 
             </Switch>
             </div>
