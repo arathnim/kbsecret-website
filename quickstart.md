@@ -58,8 +58,9 @@ snippet
 
 In a clean installation, these are KBSecret's default types.
 
-Users can add their own types by dropping Ruby classes in `~/.config/kbsecret/record/`,
-and you should check out the [customization](/#/customize/) page for more info on that.
+Users can add their own types by dropping Ruby classes in
+`/keybase/private/<username>/kbsecret/.config/record/`, and you should check out the
+[customization](/#/customize/) page for more info on that.
 
 ## Records
 
