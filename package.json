@@ -9,7 +9,7 @@
     "build": "node src/build.js && NODE_ENV=production webpack --no-progress -p"
   },
   "dependencies": {
-    "normalize.css": "^6.0.0",
+    "normalize.css": "^8.0.1",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-flexbox-grid": "^2.0.0",
