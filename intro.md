@@ -2,6 +2,9 @@
 comments: "kbsecret main page markdown"
 ---
 
+**Warning**: KBSecret is currently maintained on a best-effort basis. PRs are **strongly**
+preferred over new issues.
+
 KBSecret is a command line utility and library for managing *secrets*.
 
 Secrets can be structured (like login pairs and environment keys), or unstructured (like raw
